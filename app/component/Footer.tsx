@@ -5,21 +5,21 @@ import { Mail, Instagram, X } from 'lucide-react';
 export default function Footer() {
   return (
     <footer className="w-full bg-gradient-to-b from-[#0b0b2d] via-[#06061c] to-black text-gray-300">
-      <div className="mx-auto max-w-7xl px-10 py-20">
+      <div className="mx-auto max-w-7xl px-4 sm:px-6 md:px-10 py-12 md:py-20">
 
         {/* TOP GRID */}
-        <div className="grid grid-cols-1 gap-12 md:grid-cols-5">
+        <div className="grid grid-cols-1 gap-8 sm:gap-10 md:gap-12 sm:grid-cols-2 lg:grid-cols-5">
 
           {/* BRAND */}
-          <div className="max-w-md md:col-span-2">
-            <div className="flex items-center gap-2 text-xl font-semibold text-white">
+          <div className="max-w-md lg:col-span-2">
+            <div className="flex items-center gap-2 text-lg sm:text-xl font-semibold text-white">
               <div className="flex h-7 w-7 items-center justify-center rounded-full bg-blue-500">
                 <div className="h-3 w-3 rounded-full bg-[#0b0b2d]" />
               </div>
               Paylance
             </div>
 
-            <p className="mt-4 text-sm leading-relaxed text-gray-400">
+            <p className="mt-4 text-xs sm:text-sm leading-relaxed text-gray-400">
               We make live streaming simple, engaging,
               <br />
               and growth-focused for creators
@@ -28,10 +28,10 @@ export default function Footer() {
             </p>
 
             {/* EMAIL + SOCIAL */}
-            <div className="mt-6 flex flex-wrap items-center gap-4">
-              <div className="flex items-center gap-2 rounded-full border border-white/20 px-4 py-2 text-sm">
+            <div className="mt-6 flex flex-col sm:flex-row sm:flex-wrap items-start sm:items-center gap-3 sm:gap-4">
+              <div className="flex items-center gap-2 rounded-full border border-white/20 px-3 sm:px-4 py-2 text-xs sm:text-sm">
                 <Mail size={14} />
-                support@streamia.co
+                <span className="truncate">support@streamia.co</span>
               </div>
 
               <div className="flex items-center gap-3">

@@ -49,11 +49,13 @@ import Pricing from './component/Pricing';
 import Testimonial from './component/Testimonials';
 import CTASection from './component/CTAsection';
 import Footer from './component/Footer';
+import TrustedBy from './component/Trustedby';
 
 export default function Home() {
   return(
     <>
     <Hero/>
+    <TrustedBy/>
     <Features/>
     <Howitworks/>
     <Pricing/>

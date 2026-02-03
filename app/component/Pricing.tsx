@@ -4,15 +4,15 @@ import { Check } from 'lucide-react';
 
 export default function Pricing() {
   return (
-    <section className="bg-white py-24" id='pricing'>
-      <div className="mx-auto max-w-6xl px-6">
+    <section className="bg-white px-4 sm:px-6 md:px-8 py-12 md:py-16" id='pricing'>
+      <div className="mx-auto max-w-6xl px-4 sm:px-6">
         {/* Heading */}
-        <div className="mb-16 text-center">
+        <div className="mb-12 md:mb-16 text-center">
           <span className="mb-3 inline-block rounded-full bg-slate-100 px-4 py-1 text-xs font-medium text-slate-600">
             Pricing
           </span>
 
-          <h2 className="mt-4 text-3xl font-semibold text-slate-900 md:text-4xl">
+          <h2 className="mt-4 text-2xl sm:text-3xl font-semibold text-slate-900 md:text-4xl">
             Pick A Plan To Manage
             <br />
             Your Money Smarter
@@ -20,7 +20,7 @@ export default function Pricing() {
         </div>
 
         {/* Pricing Cards */}
-        <div className="grid gap-8 md:grid-cols-3">
+        <div className="grid gap-6 sm:gap-8 sm:grid-cols-2 md:grid-cols-3">
 
           {/* Starter Plan */}
           <div className="rounded-3xl border border-slate-200 bg-white p-8">
@@ -51,7 +51,7 @@ export default function Pricing() {
               ))}
             </ul>
 
-            <button className="mt-8 w-full rounded-full bg-black py-3 text-sm font-medium text-white shadow">
+            <button className="mt-16 w-full rounded-full bg-black py-3 text-sm font-medium text-white shadow">
               Get Starter Plan
             </button>
           </div>

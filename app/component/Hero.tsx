@@ -1,7 +1,20 @@
-import React from 'react'
+'use client';
+
+import React, { useState } from 'react'
 import logo from '../Screenshot_2026-02-02_085244-removebg-preview.png';
 import Image from 'next/image';
+import { Menu, X } from 'lucide-react';
+
 const Hero = () => {
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
+
+  const toggleMenu = () => {
+    setIsMenuOpen(!isMenuOpen);
+  };
+
+  const closeMenu = () => {
+    setIsMenuOpen(false);
+  };
 
       const blurStyle = {
           filter: 'blur(100px)',
@@ -9,10 +22,11 @@ const Hero = () => {
       };
       
         return (
-          <section
-            className="relative min-h-screen overflow-hidden
-        bg-gradient-to-r from-[#cfe7ff] via-[#f3f8ff] to-white"
-          >
+         <section
+  className="relative overflow-hidden h-auto md:h-[672px] w-full
+  bg-gradient-to-r from-[#cfe7ff] via-[#f3f8ff] to-white"
+>
+
             {/* Radial background glow */}
            <div className="absolute inset-0 pointer-events-none">
           <div
@@ -33,7 +47,7 @@ const Hero = () => {
       
               {/* NAVBAR */}
               <nav className="flex justify-between items-center
-                mx-10 mt-4 rounded-xl px-6 h-14 
+                mx-4 sm:mx-8 md:mx-20 mt-4 rounded-xl px-4 sm:px-6 h-14 
                 bg-white/70 backdrop-blur-xl shadow-sm">
       
                 <div className="flex items-center gap-2">
@@ -48,56 +62,118 @@ const Hero = () => {
                   <h1 className="font-semibold text-slate-900">Paylance</h1>
                 </div>
       
-                <ol className="flex gap-6 text-slate-700 font-medium">
-                  {/* <li>Home</li> */}
-                  <a href='#'>Home</a>
-                  {/* <li>Feature</li> */}
-                  <a href='#features'>Features</a>
-                  {/* <li>How It Works</li> */}
-                  <a href='#howitworks'>How It Works</a>
-                  {/* <li>Pricing</li> */}
-                  <a href='#pricing'>Pricing</a>
+                {/* Desktop Navigation */}
+                <ol className="hidden md:flex gap-6 text-slate-700 font-medium">
+                  <a href='#' className="hover:text-blue-600 transition">Home</a>
+                  <a href='#features' className="hover:text-blue-600 transition">Features</a>
+                  <a href='#howitworks' className="hover:text-blue-600 transition">How It Works</a>
+                  <a href='#pricing' className="hover:text-blue-600 transition">Pricing</a>
                 </ol>
       
-                <button className="bg-black text-white px-4 py-2 rounded-full">
+                <button className="hidden md:flex items-center gap-2 rounded-full
+    bg-gradient-to-b from-[#484e57] via-[#2b333a] to-[#111827]
+    px-4 py-2 text-sm font-medium text-gray-50
+    shadow-[0_8px_20px_rgba(0,0,0,0.35)]
+    transition hover:brightness-110">
                   Get Started
                 </button>
+
+                {/* Mobile Menu Toggle */}
+                <button 
+                  onClick={toggleMenu}
+                  className="md:hidden flex items-center justify-center w-10 h-10 rounded-lg hover:bg-gray-100 transition"
+                  aria-label="Toggle menu"
+                >
+                  {isMenuOpen ? <X size={24} /> : <Menu size={24} />}
+                </button>
               </nav>
+
+              {/* Mobile Menu */}
+              {isMenuOpen && (
+                <div className="md:hidden absolute top-20 left-4 right-4 z-50 rounded-xl bg-white/95 backdrop-blur-xl shadow-xl border border-gray-200">
+                  <div className="flex flex-col p-6 space-y-4">
+                    <a 
+                      href='#' 
+                      onClick={closeMenu}
+                      className="text-slate-700 font-medium hover:text-blue-600 transition py-2"
+                    >
+                      Home
+                    </a>
+                    <a 
+                      href='#features' 
+                      onClick={closeMenu}
+                      className="text-slate-700 font-medium hover:text-blue-600 transition py-2"
+                    >
+                      Features
+                    </a>
+                    <a 
+                      href='#howitworks' 
+                      onClick={closeMenu}
+                      className="text-slate-700 font-medium hover:text-blue-600 transition py-2"
+                    >
+                      How It Works
+                    </a>
+                    <a 
+                      href='#pricing' 
+                      onClick={closeMenu}
+                      className="text-slate-700 font-medium hover:text-blue-600 transition py-2"
+                    >
+                      Pricing
+                    </a>
+                    <button className="flex items-center justify-center gap-2 rounded-full
+                      bg-gradient-to-b from-[#484e57] via-[#2b333a] to-[#111827]
+                      px-4 py-2 text-sm font-medium text-gray-50
+                      shadow-[0_8px_20px_rgba(0,0,0,0.35)]
+                      transition hover:brightness-110 mt-2">
+                      Get Started
+                    </button>
+                  </div>
+                </div>
+              )}
       
               {/* HERO TEXT */}
-              <div className="text-center mt-20">
-                <h1 className="text-2xl font-semibold leading-tight text-slate-900 md:text-5xl">
+              <div className="text-center mt-12 md:mt-20 px-4">
+                <h1 className="text-3xl md:text-5xl font-semibold leading-tight text-slate-900">
                   Send & Receive Money Instantly
                   <br /> Secure Simple Global
                 </h1>
       
-                <p className="mt-4 text-gray-600">
+                <p className="mt-4 text-sm md:text-base text-gray-600 px-4">
                   Manage spending, track income, and stay on top of your
-                  <br /> finances with ease – all from one simple dashboard
+                  <br className="hidden sm:block" /> finances with ease – all from one simple dashboard
                 </p>
               </div>
       
               {/* EMAIL */}
-              <div className="mx-auto mt-6 flex w-fit items-center gap-2 rounded-full bg-white px-2 py-2 shadow-lg">
+              <div className="mx-auto mt-6 md:mt-2 flex w-fit items-center gap-2 rounded-full bg-white px-2 py-2 shadow-lg max-w-[90%] sm:max-w-none">
           <input
             type="email"
             placeholder="Your email address"
-            className="w-56 rounded-full px-4 py-2 text-sm outline-none"
+            className="w-32 sm:w-56 rounded-full px-4 py-2 text-sm outline-none"
           />
-          <button className="flex items-center gap-2 rounded-full bg-black px-5 py-2 text-sm text-white shadow">
-            <span className="flex h-5 w-5 items-center justify-center rounded-full bg-white/20 text-xs">
-              ▶
-            </span>
-            Get Started
-          </button>
+          <button
+  className="
+    flex items-center gap-2 rounded-full
+    bg-gradient-to-b from-[#484e57] via-[#2b333a] to-[#111827]
+    px-4 py-2 text-sm font-medium text-gray-50
+    shadow-[0_8px_20px_rgba(0,0,0,0.35)]
+    transition hover:brightness-110
+  "
+>
+  <span className="flex h-5 w-5 items-center justify-center rounded-full bg-white/20 text-xs">
+    ▶
+  </span>
+  Get Started
+</button>
+
         </div>
       
               {/* IMAGE */}
-              <div className="relative flex justify-center h-[600px] max-w-6xl mx-auto">
+              <div className="relative flex justify-center h-[200px] sm:h-[300px] md:h-[600px] max-w-6xl mx-auto pb-0 mb-0">
                 <Image
                   src={logo}
                   alt="Paylance Visual"
-                  className="object-contain -mt-60"
+                  className="object-contain -mt-10 sm:-mt-20 md:-mt-60"
                   priority
                 />
               </div>
