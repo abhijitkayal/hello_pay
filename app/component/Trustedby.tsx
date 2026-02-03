@@ -3,6 +3,14 @@ export default function TrustedBy() {
     "Gladia",
     "lemlist",
     "Default",
+    "Veesion",
+    "Gladia",
+    "lemlist",
+    "Default",
+    "Veesion",
+    "Gladia",
+    "lemlist",
+    "Default",
     "Veesion"
   ];
 
@@ -16,7 +24,7 @@ export default function TrustedBy() {
         </p>
 
         {/* Text Logos - Always 4 columns */}
-        <div className="grid grid-cols-4 gap-4 sm:gap-8 md:gap-12 lg:gap-16 items-center justify-items-center">
+        <div className="grid grid-cols-6 gap-4 sm:gap-8 md:gap-8 lg:gap-16 items-center justify-items-center">
           {companies.map((name) => (
             <h5
               key={name}

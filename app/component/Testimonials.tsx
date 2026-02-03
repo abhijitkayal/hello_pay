@@ -58,13 +58,13 @@ export default function Testimonials() {
   const getBackgroundCard = () => testimonials[(currentIndex + 1) % testimonials.length];
   
   return (
-    <section className="w-full bg-white mt-10 px-4 sm:px-8 md:px-14 py-12 md:py-24">
+    <section className="w-full bg-gray-200 mt-50 md:mt-10 px-4 sm:px-8 md:px-14 py-12 md:py-24 h-100 ">
       <div className="mx-auto grid max-w-7xl grid-cols-1 items-center gap-8 md:gap-16 px-4 sm:px-6 lg:grid-cols-2">
 
         {/* LEFT CONTENT */}
-        <div className='text-center lg:text-left'>
+        <div className='text-center -mt-60 lg:text-left'>
           {/* Pill */}
-          <span className="mb-4 inline-block rounded-full bg-gray-100 px-4 py-1 text-xs font-medium text-gray-600">
+          <span className="mb-4 inline-block rounded-full text-gray-100 px-4 py-1 text-xs font-medium bg-gray-600">
             Testimonial
           </span>
 

@@ -8,7 +8,7 @@ export default function Pricing() {
       <div className="mx-auto max-w-6xl px-4 sm:px-6">
         {/* Heading */}
         <div className="mb-12 md:mb-16 text-center">
-          <span className="mb-3 inline-block rounded-full bg-slate-100 px-4 py-1 text-xs font-medium text-slate-600">
+          <span className="mb-3 inline-block rounded-full text-slate-100 px-4 py-1 text-xs font-medium bg-slate-600">
             Pricing
           </span>
 
@@ -51,7 +51,13 @@ export default function Pricing() {
               ))}
             </ul>
 
-            <button className="mt-16 w-full rounded-full bg-black py-3 text-sm font-medium text-white shadow">
+            <button className="
+    flex items-center gap-2 w-full justify-center rounded-full
+    bg-gradient-to-b from-[#484e57] via-[#2b333a] to-[#111827]
+    px-4 py-3 mt-16 text-sm font-medium text-gray-50
+    shadow-[0_8px_20px_rgba(0,0,0,0.35)]
+    transition hover:brightness-110 
+  ">
               Get Starter Plan
             </button>
           </div>
@@ -78,7 +84,7 @@ export default function Pricing() {
                 'Priority email & chat support',
               ].map((item, i) => (
                 <li key={i} className="flex items-center gap-2">
-                  <span className="flex h-5 w-5 items-center justify-center rounded-full bg-white text-blue-600">
+                  <span className="flex h-5 w-5 items-center justify-center rounded-full bg-yellow-200 text-blue-600">
                     <Check size={12} />
                   </span>
                   {item}
@@ -86,7 +92,7 @@ export default function Pricing() {
               ))}
             </ul>
 
-            <button className="mt-8 w-full rounded-full bg-white py-3 text-sm font-medium text-slate-900 shadow">
+            <button className="mt-8 w-full rounded-full bg-gradient-to-br from-yellow-100 to-yellow-500 py-3 text-sm font-medium text-slate-900 shadow">
               Get Pro Plan
             </button>
           </div>
@@ -121,7 +127,13 @@ export default function Pricing() {
               ))}
             </ul>
 
-            <button className="mt-8 w-full rounded-full bg-black py-3 text-sm font-medium text-white shadow">
+            <button className="mt-8 w-full rounded-full bg-black py-3 text-center justify-center text-sm font-medium
+    flex items-center gap-2 
+    bg-gradient-to-b from-[#484e57] via-[#2b333a] to-[#111827]
+    px-4 text-gray-50
+    shadow-[0_8px_20px_rgba(0,0,0,0.35)]
+    transition hover:brightness-110
+  ">
               Get Enterprise Plan
             </button>
           </div>

@@ -23,25 +23,51 @@ const Hero = () => {
       
         return (
          <section
-  className="relative overflow-hidden h-auto md:h-[672px] w-full
+  className="relative overflow-hidden h-auto md:h-[690px] w-full
   bg-gradient-to-r from-[#cfe7ff] via-[#f3f8ff] to-white"
 >
 
             {/* Radial background glow */}
-           <div className="absolute inset-0 pointer-events-none">
-          <div
-            className="absolute -top-[250px] -left-[250px]
-            w-[700px] h-[700px] rounded-full
-            bg-[radial-gradient(circle_at_center,#5fa8ff_0%,#8cc7ff_30%,#cfe7ff_55%)]
-            blur-[80px]"
-          />
-            <div
-          className="absolute -top-[200px] -right-[250px]
-          w-[700px] h-[700px] rounded-full
-          bg-[radial-gradient(circle_at_center,#FFD233_0%,#FFD233_30%,#FFD233_55%,transparent_70%)]
-          blur-[80px]"
-        />
-        </div>
+          <div className="absolute inset-0 pointer-events-none">
+  
+  {/* 🔵 Blue radial gradient */}
+  <div
+    className="
+      absolute
+      -top-[180px] -left-[180px]
+      w-[420px] h-[420px]
+      bg-[radial-gradient(circle_at_center,#5fa8ff_0%,#8cc7ff_30%,#cfe7ff_55%)]
+      rounded-full blur-[70px]
+
+      sm:-top-[220px] sm:-left-[220px]
+      sm:w-[520px] sm:h-[520px]
+
+      md:-top-[250px] md:-left-[250px]
+      md:w-[700px] md:h-[700px]
+      md:blur-[80px]
+    "
+  />
+
+  {/* 🟡 Yellow radial gradient */}
+  <div
+    className="
+      absolute
+      -top-[160px] -right-[180px]
+      w-[420px] h-[420px]
+      bg-[radial-gradient(circle_at_center,#FFD233_0%,#FFD233_30%,#FFD233_55%,transparent_70%)]
+      rounded-full blur-[70px]
+
+      sm:-top-[190px] sm:-right-[220px]
+      sm:w-[520px] sm:h-[520px]
+
+      md:-top-[200px] md:-right-[250px]
+      md:w-[700px] md:h-[700px]
+      md:blur-[80px]
+    "
+  />
+
+</div>
+
       
             <div className="relative z-10">
       
@@ -132,8 +158,8 @@ const Hero = () => {
               )}
       
               {/* HERO TEXT */}
-              <div className="text-center mt-12 md:mt-20 px-4">
-                <h1 className="text-3xl md:text-5xl font-semibold leading-tight text-slate-900">
+              <div className="text-center mt-0 md:mt-20 px-4">
+                <h1 className="text-3xl md:text-5xl font-inter md:-mt-15 font-semibold leading-tight text-slate-900 ">
                   Send & Receive Money Instantly
                   <br /> Secure Simple Global
                 </h1>
@@ -169,7 +195,7 @@ const Hero = () => {
         </div>
       
               {/* IMAGE */}
-              <div className="relative flex justify-center h-[200px] sm:h-[300px] md:h-[600px] max-w-6xl mx-auto pb-0 mb-0">
+              <div className="relative flex mt-10 md:mt-0 justify-center h-[200px] sm:h-[300px] md:h-[600px] max-w-6xl mx-auto pb-0 mb-0">
                 <Image
                   src={logo}
                   alt="Paylance Visual"

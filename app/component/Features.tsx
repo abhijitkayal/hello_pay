@@ -1,5 +1,8 @@
 'use client';
 
+import Image from "next/image";
+import logo from './download.jpg'
+
 export default function Features() {
   const data = [
   { month: "Jan", value: 40 },
@@ -9,11 +12,11 @@ export default function Features() {
   { month: "May", value: 85 }, // highlighted bar
 ];
   return (
-    <section className="relative bg-white px-4 sm:px-6 md:px-10 py-12 md:py-16" id="features">
+    <section className="relative bg-white px-4 sm:px-6 md:px-10 py-2 md:py-16" id="features">
       <div className="mx-auto max-w-6xl px-4 sm:px-6">
         {/* Heading */}
         <div className="mb-12 md:mb-16 text-center">
-          <span className="mb-3 inline-block rounded-full bg-slate-100 px-4 py-1 text-xs font-medium text-slate-600">
+          <span className="mb-3 inline-block rounded-full text-slate-100 px-4 py-1 text-xs font-medium bg-slate-600">
             Features
           </span>
 
@@ -28,7 +31,7 @@ export default function Features() {
         <div className="grid gap-6 sm:gap-8 md:gap-10 sm:grid-cols-2 md:grid-cols-3">
           
           {/* Card 1 */}
-          <div className="p-6">
+          <div className="p-6 mx-auto max-w-md w-full">
             <div className="mb-6 flex px-4 py-7 border border-slate-200  rounded-3xl justify-center">
               <div className="relative h-44 w-72 rounded-2xl bg-gradient-to-br from-blue-600 to-blue-400 p-5 text-white shadow-lg">
                 <p className="text-xs opacity-80">Current Balance</p>
@@ -57,7 +60,7 @@ export default function Features() {
           </div>
 
           {/* Card 2 */}
-          <div className=" p-6">
+          <div className="p-6 mx-auto max-w-md w-full">
             <div className="px-4 py-7 border border-slate-200 rounded-3xl">
             <div className="rounded-2xl p-4">
               <h5 className=" text-sm font-semibold text-slate-700">
@@ -67,7 +70,13 @@ export default function Features() {
               <div className="space-y-3 ">
                 {['Jane', 'Robert'].map((name, i) => (
                   <div key={i} className="flex items-center gap-3">
-                    <div className="h-8 w-8 rounded-full bg-slate-300" />
+                    {/* <div className="h-8 w-8 rounded-full bg-slate-300" /> */}
+                     <Image
+                  src={logo}
+                  alt="Paylance Visual"
+                  className="h-8 w-8 rounded-full bg-slate-300"
+                  priority
+                />
                     <div className="text-sm">
                       <p className="font-medium text-slate-900">
                         {name} Updated account settings
@@ -91,7 +100,7 @@ export default function Features() {
           </div>
 
           {/* Card 3 */}
-          <div className="p-6">
+          <div className="p-6 mx-auto max-w-md w-full">
             <div className="rounded-3xl border border-slate-200 pt-7 pl-7">
             <div className=" rounded-2xl bg-slate-50 p-4">
               <p className="text-xs text-slate-500">Total Revenue</p>

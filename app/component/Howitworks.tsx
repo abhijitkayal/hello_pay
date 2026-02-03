@@ -10,7 +10,7 @@ export default function HowItWorks() {
         
         {/* Heading */}
         <div className="mb-12 md:mb-16 text-center">
-          <span className="mb-3 inline-block rounded-full bg-slate-100 px-4 py-1 text-xs font-medium text-slate-600">
+          <span className="mb-3 inline-block rounded-full text-slate-100 px-4 py-1 text-xs font-medium bg-slate-600">
             HOW IT WORKS
           </span>
 
@@ -27,11 +27,11 @@ export default function HowItWorks() {
 
             {/* Step 01 */}
             <div className="relative p-6 sm:p-8 md:p-10">
-              <span className="absolute right-4 sm:right-6 top-4 sm:top-6 text-4xl sm:text-5xl font-bold text-slate-200">
+              <span className="top-4 sm:top-6 text-4xl sm:text-5xl font-bold text-slate-200">
                 01
               </span>
 
-              <div className="mb-4 sm:mb-6 flex h-10 w-10 items-center justify-center rounded-xl bg-blue-50 text-blue-600">
+              <div className="mb-4 -mt-6 ml-1 sm:mb-6 flex h-10 w-10 items-center justify-center rounded-xl  text-black">
                 <UserPlus size={20} />
               </div>
 
@@ -46,11 +46,11 @@ export default function HowItWorks() {
 
             {/* Step 02 */}
             <div className="relative p-6 sm:p-8 md:p-10">
-              <span className="absolute right-4 sm:right-6 top-4 sm:top-6 text-4xl sm:text-5xl font-bold text-slate-200">
+              <span className=" top-4 sm:top-6 text-4xl sm:text-5xl font-bold text-slate-200">
                 02
               </span>
 
-              <div className="mb-4 sm:mb-6 flex h-10 w-10 items-center justify-center rounded-xl bg-blue-50 text-blue-600">
+              <div className="mb-4 sm:mb-6 flex h-10 w-10 items-center justify-center rounded-xl -mt-6 ml-1 text-black">
                 <Wallet size={20} />
               </div>
 
@@ -65,11 +65,11 @@ export default function HowItWorks() {
 
             {/* Step 03 */}
             <div className="relative p-6 sm:p-8 md:p-10">
-              <span className="absolute right-4 sm:right-6 top-4 sm:top-6 text-4xl sm:text-5xl font-bold text-slate-200">
+              <span className=" sm:top-6 text-4xl sm:text-5xl font-bold text-slate-200">
                 03
               </span>
 
-              <div className="mb-4 sm:mb-6 flex h-10 w-10 items-center justify-center rounded-xl bg-blue-50 text-blue-600">
+              <div className="mb-4 sm:mb-6 flex h-10 w-10 items-center justify-center rounded-xl  text-black -mt-6 ml-1">
                 <BarChart3 size={20} />
               </div>
 
