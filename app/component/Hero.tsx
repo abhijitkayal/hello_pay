@@ -77,7 +77,7 @@ const Hero = () => {
                 mx-4 sm:mx-8 md:mx-20 mt-4 rounded-3xl px-4 sm:px-6 h-14 
                 bg-white/70 backdrop-blur-xl shadow-sm">
       
-                <div className="flex items-center  gap-2">
+                <div className="flex items-center md:-ml-4 gap-2">
                   <Image
                     src={logo1}
                     alt="Paylance Logo"
@@ -209,7 +209,7 @@ const Hero = () => {
                 <Image
                   src={logo}
                   alt="Paylance Visual"
-                  className="object-contain -mt-10 sm:-mt-20 md:-mt-60"
+                  className="object-contain -mt-10 sm:-mt-18 md:-mt-60"
                   priority
                 />
               </div>
