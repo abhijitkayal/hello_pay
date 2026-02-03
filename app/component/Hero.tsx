@@ -2,8 +2,9 @@
 
 import React, { useState } from 'react'
 import logo from '../Screenshot_2026-02-02_085244-removebg-preview.png';
+import logo1 from '../hellope_financial_services_private_limited_logo-modified.png'
 import Image from 'next/image';
-import { Menu, X } from 'lucide-react';
+import { Menu, X, ArrowRight } from 'lucide-react';
 
 const Hero = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -73,19 +74,19 @@ const Hero = () => {
       
               {/* NAVBAR */}
               <nav className="flex justify-between items-center
-                mx-4 sm:mx-8 md:mx-20 mt-4 rounded-xl px-4 sm:px-6 h-14 
+                mx-4 sm:mx-8 md:mx-20 mt-4 rounded-3xl px-4 sm:px-6 h-14 
                 bg-white/70 backdrop-blur-xl shadow-sm">
       
-                <div className="flex items-center gap-2">
+                <div className="flex items-center -ml-4 gap-2">
                   <Image
-                    src={logo}
+                    src={logo1}
                     alt="Paylance Logo"
                     width={36}
                     height={36}
                     className="object-contain"
                     priority
                   />
-                  <h1 className="font-semibold text-slate-900">Paylance</h1>
+                  <h1 className="font-semibold text-slate-900">Hello,Pay</h1>
                 </div>
       
                 {/* Desktop Navigation */}
@@ -96,11 +97,14 @@ const Hero = () => {
                   <a href='#pricing' className="hover:text-blue-600 transition">Pricing</a>
                 </ol>
       
-                <button className="hidden md:flex items-center gap-2 rounded-full
+                <button className="hidden md:flex items-center gap-2 rounded-full -mr-5
     bg-gradient-to-b from-[#484e57] via-[#2b333a] to-[#111827]
     px-4 py-2 text-sm font-medium text-gray-50
     shadow-[0_8px_20px_rgba(0,0,0,0.35)]
     transition hover:brightness-110">
+                  <span className="flex h-5 w-5 items-center justify-center rounded-full bg-white/20 text-xs">
+                    ▶
+                  </span>
                   Get Started
                 </button>
 
@@ -146,13 +150,19 @@ const Hero = () => {
                     >
                       Pricing
                     </a>
-                    <button className="flex items-center justify-center gap-2 rounded-full
-                      bg-gradient-to-b from-[#484e57] via-[#2b333a] to-[#111827]
-                      px-4 py-2 text-sm font-medium text-gray-50
-                      shadow-[0_8px_20px_rgba(0,0,0,0.35)]
-                      transition hover:brightness-110 mt-2">
-                      Get Started
-                    </button>
+                    <button className="
+    flex items-center gap-2 rounded-full
+    bg-gradient-to-b from-[#484e57] via-[#2b333a] to-[#111827]
+    px-4 py-2 text-sm font-medium text-gray-50
+    shadow-[0_8px_20px_rgba(0,0,0,0.35)]
+    transition hover:brightness-110
+  "
+>
+  <span className="flex h-5 w-5 items-center justify-center rounded-full bg-white/20 text-xs">
+    ▶
+  </span>
+  Get Started
+</button>
                   </div>
                 </div>
               )}
@@ -164,14 +174,14 @@ const Hero = () => {
                   <br /> Secure Simple Global
                 </h1>
       
-                <p className="mt-4 text-sm md:text-base text-gray-600 px-4">
+                <p className="mt-4 text-sm md:text-base md:mt-1 text-gray-600 px-4">
                   Manage spending, track income, and stay on top of your
                   <br className="hidden sm:block" /> finances with ease – all from one simple dashboard
                 </p>
               </div>
       
               {/* EMAIL */}
-              <div className="mx-auto mt-6 md:mt-2 flex w-fit items-center gap-2 rounded-full bg-white px-2 py-2 shadow-lg max-w-[90%] sm:max-w-none">
+              <div className="mx-auto mt-6 md:mt-4 flex w-fit items-center gap-2 rounded-full bg-white px-2 py-2 shadow-lg max-w-[90%] sm:max-w-none">
           <input
             type="email"
             placeholder="Your email address"

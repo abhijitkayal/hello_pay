@@ -1,6 +1,6 @@
 'use client';
 
-import { ChevronLeft, ChevronRight, Star } from 'lucide-react';
+import { Star, ChevronLeft, ChevronRight } from 'lucide-react';
 import Image from 'next/image';
 import { useState } from 'react';
 import logo from "../Screenshot_2026-02-02_085244-removebg-preview.png"
@@ -41,35 +41,37 @@ const testimonials = [
 ];
 
 export default function Testimonials() {
-  const [currentIndex, setCurrentIndex] = useState(0);
-  const [direction, setDirection] = useState<'left' | 'right'>('right');
-
-  const handlePrev = () => {
-    setDirection('left');
-    setCurrentIndex((prev) => (prev === 0 ? testimonials.length - 1 : prev - 1));
-  };
+  const [cards, setCards] = useState(testimonials);
 
   const handleNext = () => {
-    setDirection('right');
-    setCurrentIndex((prev) => (prev === testimonials.length - 1 ? 0 : prev + 1));
+    setCards((prevCards) => {
+      const newArray = [...prevCards];
+      newArray.unshift(newArray.pop()!);
+      return newArray;
+    });
   };
 
-  const getCurrentCard = () => testimonials[currentIndex];
-  const getBackgroundCard = () => testimonials[(currentIndex + 1) % testimonials.length];
+  const handlePrev = () => {
+    setCards((prevCards) => {
+      const newArray = [...prevCards];
+      newArray.push(newArray.shift()!);
+      return newArray;
+    });
+  };
   
   return (
-    <section className="w-full bg-gray-200 mt-50 md:mt-10 px-4 sm:px-8 md:px-14 py-12 md:py-24 h-100 ">
-      <div className="mx-auto grid max-w-7xl grid-cols-1 items-center gap-8 md:gap-16 px-4 sm:px-6 lg:grid-cols-2">
+    <section className="w-full bg-gray-200 mt-6 md:mt-10 px-3 sm:px-4 md:px-8 lg:px-14 py-8 md:py-16 lg:py-24">
+      <div className="mx-auto grid max-w-full md:max-w-7xl grid-cols-1 items-center gap-6 md:gap-12 lg:gap-16 px-2 sm:px-4 md:px-6 lg:grid-cols-2">
 
         {/* LEFT CONTENT */}
-        <div className='text-center -mt-60 lg:text-left'>
+        <div className='text-center lg:text-left'>
           {/* Pill */}
-          <span className="mb-4 inline-block rounded-full text-gray-100 px-4 py-1 text-xs font-medium bg-gray-600">
+          <span className="mb-2 md:mb-3 inline-block rounded-full shadow-[0_8px_20px_rgba(0,0,0,0.35)] text-yellow-300 px-3 py-1 text-[10px] sm:text-xs font-medium bg-black">
             Testimonial
           </span>
 
           {/* Heading */}
-          <h2 className="text-3xl sm:text-4xl font-semibold leading-tight text-gray-900">
+          <h2 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-semibold leading-snug md:leading-tight text-gray-900">
             Trusted By People <br /> Like You
           </h2>
 
@@ -96,76 +98,48 @@ export default function Testimonials() {
           </div>
         </div>
 
-        {/* RIGHT TESTIMONIAL CARDS */}
-        <div className="relative h-[400px] sm:h-[450px] md:h-[500px] w-full max-w-md mx-auto lg:max-w-none">
+        {/* RIGHT CARD STACK */}
+        <div className="relative h-[240px] sm:h-[280px] md:h-[320px] lg:h-[350px] w-full max-w-full sm:max-w-md mx-auto lg:max-w-none flex items-start justify-center mt-6 lg:mt-0">
+          <div className="relative h-56 sm:h-64 md:h-64 w-full max-w-[280px] md:-mr-34 sm:max-w-sm">
+            {cards.map((card, index) => (
+              <div
+                key={card.id}
+                className="absolute left-0 top-0 flex h-56 sm:h-64 md:h-64 w-full flex-col justify-between rounded-2xl md:rounded-3xl border border-gray-200 bg-white p-4 sm:p-5 shadow-xl transition-all duration-500 ease-out"
+                style={{
+                  transformOrigin: 'top center',
+                  transform: `translateY(${index * -10}px) scale(${1 - index * 0.05})`,
+                  zIndex: cards.length - index,
+                  opacity: index < 3 ? 1 - index * 0.2 : 0,
+                  pointerEvents: index === 0 ? 'auto' : 'none',
+                }}
+              >
+                <div>
+                  <div className="flex items-center gap-1 text-xs sm:text-sm font-medium text-gray-700">
+                    <Star className="fill-yellow-400 text-yellow-400" size={14} />
+                    {card.rating}/5
+                  </div>
 
-          {/* Background Card (Next - Behind) */}
-          <div 
-            key={`bg-${getBackgroundCard().id}`}
-            className={`absolute left-0 top-8 w-[280px] sm:w-[320px] md:w-[380px] rounded-2xl border border-gray-200 bg-white p-4 sm:p-6 shadow-lg opacity-80 transition-all duration-1000 ease-in-out
-              ${direction === 'right' ? 'animate-[slideInRight_1s_ease-in-out]' : 'animate-[slideInLeft_1s_ease-in-out]'}
-            `}
-          >
-            <div className="flex items-center gap-1 text-sm font-medium text-gray-700">
-              <Star className="fill-yellow-400 text-yellow-400" size={16} />
-              {getBackgroundCard().rating}/5
-            </div>
+                  <p className="mt-2 sm:mt-3 text-[11px] sm:text-xs leading-relaxed text-gray-600">
+                    {card.text}
+                  </p>
+                </div>
 
-            <p className="mt-3 text-sm leading-relaxed text-gray-600">
-              {getBackgroundCard().text}
-            </p>
-
-            <div className="mt-4 flex items-center gap-3">
-              <Image
-                src={getBackgroundCard().image}
-                alt={getBackgroundCard().name}
-                width={40}
-                height={40}
-                className="rounded-full"
-              />
-              <div>
-                <p className="text-sm font-medium text-gray-900">{getBackgroundCard().name}</p>
-                <p className="text-xs text-gray-500">{getBackgroundCard().role}</p>
+                <div className="mt-3 sm:mt-4 flex items-center gap-2 sm:gap-3">
+                  <Image
+                    src={card.image}
+                    alt={card.name}
+                    width={36}
+                    height={36}
+                    className="rounded-full w-9 h-9 sm:w-11 sm:h-11"
+                  />
+                  <div>
+                    <p className="text-xs sm:text-sm font-semibold text-gray-900">{card.name}</p>
+                    <p className="text-[10px] sm:text-xs text-gray-500">{card.role}</p>
+                  </div>
+                </div>
               </div>
-            </div>
+            ))}
           </div>
-
-          {/* Foreground Card (Active - Overlapping 30% of next card) */}
-          <div 
-            key={`fg-${getCurrentCard().id}`}
-            className={`absolute left-[calc(280px*0.3)] sm:left-[calc(320px*0.3)] md:left-[calc(380px*0.3)] top-0 z-20 w-[300px] sm:w-[340px] md:w-[420px] rounded-2xl border-2 border-blue-100 bg-white p-5 sm:p-6 md:p-7 shadow-2xl transition-all duration-1000 ease-in-out
-              ${direction === 'right' ? 'animate-[slideInFromLeft_1s_ease-in-out]' : 'animate-[slideInFromRight_1s_ease-in-out]'}
-            `}
-          >
-            <div className="flex items-center justify-between">
-              <div className="flex items-center gap-1 text-xs sm:text-sm font-medium text-gray-700">
-                <Star className="fill-yellow-400 text-yellow-400" size={16} />
-                {getCurrentCard().rating}/5
-              </div>
-              <span className="text-xl sm:text-2xl text-gray-300">"</span>
-            </div>
-
-            <p className="mt-3 sm:mt-4 text-xs sm:text-sm leading-relaxed text-gray-600">
-              {getCurrentCard().text}
-            </p>
-
-            <div className="mt-4 sm:mt-6 flex items-center gap-3">
-              <Image
-                src={getCurrentCard().image}
-                alt={getCurrentCard().name}
-                width={44}
-                height={44}
-                className="rounded-full w-10 h-10 sm:w-11 sm:h-11"
-              />
-              <div>
-                <p className="text-xs sm:text-sm font-semibold text-gray-900">{getCurrentCard().name}</p>
-                <p className="text-xs text-gray-500">
-                  {getCurrentCard().role}
-                </p>
-              </div>
-            </div>
-          </div>
-
         </div>
       </div>
     </section>

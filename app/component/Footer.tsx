@@ -1,6 +1,8 @@
 'use client';
 
-import { Mail, Instagram, X } from 'lucide-react';
+import { Mail, Instagram, X, LinkedinIcon } from 'lucide-react';
+import logo from '../hellope_financial_services_private_limited_logo-modified.png'
+import Image from 'next/image';
 
 export default function Footer() {
   return (
@@ -13,18 +15,17 @@ export default function Footer() {
           {/* BRAND */}
           <div className="max-w-md lg:col-span-2">
             <div className="flex items-center gap-2 text-lg sm:text-xl font-semibold text-white">
-              <div className="flex h-7 w-7 items-center justify-center rounded-full bg-blue-500">
-                <div className="h-3 w-3 rounded-full bg-[#0b0b2d]" />
+              <div className="flex h-7 w-7 items-center justify-center">
+                <Image src={logo} alt="Logo" className="h-15 w-15 object-contain" />
               </div>
-              Paylance
+              Hello,Pay
             </div>
 
             <p className="mt-4 text-xs sm:text-sm leading-relaxed text-gray-400">
-              We make live streaming simple, engaging,
-              <br />
-              and growth-focused for creators
-              <br />
-              everywhere.
+             Revolutionizing Bussiness 
+               <br />
+              Payments Across India!
+            
             </p>
 
             {/* EMAIL + SOCIAL */}
@@ -36,10 +37,10 @@ export default function Footer() {
 
               <div className="flex items-center gap-3">
                 <a
-                  href="#"
+                  href="https://www.linkedin.com/company/hellope-financial-services-private-limited/about/"
                   className="flex h-9 w-9 items-center justify-center rounded-full border border-white/20 transition hover:bg-white/10"
                 >
-                  <Instagram size={16} />
+                  <LinkedinIcon size={16} />
                 </a>
                 <a
                   href="#"
@@ -56,11 +57,15 @@ export default function Footer() {
             <h4 className="mb-4 text-sm font-semibold text-white">
               Quick Links
             </h4>
-            <ul className="space-y-1.5 text-sm text-gray-400">
-              <li>Home</li>
-              <li>Features</li>
-              <li>Pricing</li>
-              <li>Blog</li>
+            <ul className="space-y-1.5 fgrid grid-cols-1 text-sm text-gray-400">
+              <li><a href='#'>Home</a></li>
+              {/* <a href='#'>Home</a> */}
+              {/* <li>Features</li> */}
+              <li><a href='#features'>Features</a></li>
+              {/* <li>Pricing</li> */}
+              <li><a href='#pricing'>Pricing</a></li>
+              {/* <li>Blog</li> */}
+              <li><a href='#howitworks'>How It Works</a></li>
               <li>Contact</li>
             </ul>
           </div>

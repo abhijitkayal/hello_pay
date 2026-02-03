@@ -10,7 +10,7 @@ export default function HowItWorks() {
         
         {/* Heading */}
         <div className="mb-12 md:mb-16 text-center">
-          <span className="mb-3 inline-block rounded-full text-slate-100 px-4 py-1 text-xs font-medium bg-slate-600">
+          <span className="mb-3 inline-block rounded-full shadow-[0_8px_20px_rgba(0,0,0,0.35)] text-yellow-300 px-4 py-1 text-xs font-medium bg-black">
             HOW IT WORKS
           </span>
 
@@ -23,7 +23,15 @@ export default function HowItWorks() {
 
         {/* Steps Container */}
         <div className="rounded-2xl sm:rounded-3xl border border-slate-200 bg-white shadow-sm">
-          <div className="grid grid-cols-1 divide-y sm:grid-cols-2 md:grid-cols-3 sm:divide-x md:divide-y-0">
+<div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 [&>*]:relative 
+  [&>*:not(:last-child)]:after:content-[''] [&>*:not(:last-child)]:after:absolute 
+  [&>*:not(:last-child)]:after:bg-gray-300
+  [&>*:not(:last-child)]:after:left-[8px] [&>*:not(:last-child)]:after:right-[8px] [&>*:not(:last-child)]:after:bottom-0 [&>*:not(:last-child)]:after:h-[1px]
+  sm:[&>*:not(:last-child)]:after:left-auto sm:[&>*:not(:last-child)]:after:right-0 sm:[&>*:not(:last-child)]:after:top-[8px] sm:[&>*:not(:last-child)]:after:bottom-[8px] sm:[&>*:not(:last-child)]:after:w-[2px] sm:[&>*:not(:last-child)]:after:h-auto
+  md:[&>*:nth-child(2)]:after:content-['']">
+
+           
+           
 
             {/* Step 01 */}
             <div className="relative p-6 sm:p-8 md:p-10">
@@ -32,7 +40,7 @@ export default function HowItWorks() {
               </span>
 
               <div className="mb-4 -mt-6 ml-1 sm:mb-6 flex h-10 w-10 items-center justify-center rounded-xl  text-black">
-                <UserPlus size={20} />
+                <UserPlus size={35} />
               </div>
 
               <h3 className="mb-2 text-base sm:text-lg font-semibold text-slate-900">
@@ -51,7 +59,7 @@ export default function HowItWorks() {
               </span>
 
               <div className="mb-4 sm:mb-6 flex h-10 w-10 items-center justify-center rounded-xl -mt-6 ml-1 text-black">
-                <Wallet size={20} />
+                <Wallet size={35} />
               </div>
 
               <h3 className="mb-2 text-base sm:text-lg font-semibold text-slate-900">
@@ -70,7 +78,7 @@ export default function HowItWorks() {
               </span>
 
               <div className="mb-4 sm:mb-6 flex h-10 w-10 items-center justify-center rounded-xl  text-black -mt-6 ml-1">
-                <BarChart3 size={20} />
+                <BarChart3 size={35} />
               </div>
 
               <h3 className="mb-2 text-base sm:text-lg font-semibold text-slate-900">

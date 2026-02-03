@@ -8,7 +8,7 @@ export default function Pricing() {
       <div className="mx-auto max-w-6xl px-4 sm:px-6">
         {/* Heading */}
         <div className="mb-12 md:mb-16 text-center">
-          <span className="mb-3 inline-block rounded-full text-slate-100 px-4 py-1 text-xs font-medium bg-slate-600">
+          <span className="mb-3 inline-block rounded-full shadow-[0_8px_20px_rgba(0,0,0,0.35)] text-yellow-300 px-4 py-1 text-xs font-medium bg-black">
             Pricing
           </span>
 
