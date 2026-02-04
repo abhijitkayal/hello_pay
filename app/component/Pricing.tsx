@@ -4,8 +4,8 @@ import { Check } from 'lucide-react';
 
 export default function Pricing() {
   return (
-    <section className="bg-white px-4 sm:px-6 md:px-8 py-12 md:py-16" id='pricing'>
-      <div className="mx-auto max-w-6xl px-4 sm:px-6">
+    <section className="bg-white px-4 sm:px-6 md:px-0 py-12 md:py-16" id='pricing'>
+      <div className="mx-auto max-w-full md:max-w-8xl px-1 sm:px-2 md:px-20">
         {/* Heading */}
         <div className="mb-12 md:mb-16 text-center">
           <span className="mb-3 inline-block rounded-full shadow-[0_8px_20px_rgba(0,0,0,0.35)] text-yellow-300 px-4 py-1 text-xs font-medium bg-black">

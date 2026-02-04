@@ -6,7 +6,7 @@ export default function HowItWorks() {
   return (
     <section className="relative bg-white py-8 md:py-10 px-4 sm:px-6" id='howitworks'>
 
-      <div className="mx-auto max-w-6xl px-4 sm:px-6">
+      <div className="mx-auto max-w-full md:max-w-8xl px-1 sm:px-2 md:px-14">
         
         {/* Heading */}
         <div className="mb-12 md:mb-16 text-center">
@@ -34,8 +34,8 @@ export default function HowItWorks() {
            
 
             {/* Step 01 */}
-            <div className="relative p-6 sm:p-8 md:p-10">
-              <span className="top-4 sm:top-6 text-4xl sm:text-5xl font-bold text-slate-200">
+            <div className="relative p-7 sm:p-8 md:p-11">
+              <span className="top-4 sm:top-6 text-4xl sm:text-5xl font-bold text-yellow-100">
                 01
               </span>
 
@@ -54,7 +54,7 @@ export default function HowItWorks() {
 
             {/* Step 02 */}
             <div className="relative p-6 sm:p-8 md:p-10">
-              <span className=" top-4 sm:top-6 text-4xl sm:text-5xl font-bold text-slate-200">
+              <span className=" top-4 sm:top-6 text-4xl sm:text-5xl font-bold text-yellow-100">
                 02
               </span>
 
@@ -73,7 +73,7 @@ export default function HowItWorks() {
 
             {/* Step 03 */}
             <div className="relative p-6 sm:p-8 md:p-10">
-              <span className=" sm:top-6 text-4xl sm:text-5xl font-bold text-slate-200">
+              <span className=" sm:top-6 text-4xl sm:text-5xl font-bold text-yellow-100">
                 03
               </span>
 

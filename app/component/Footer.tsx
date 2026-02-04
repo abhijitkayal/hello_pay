@@ -7,7 +7,7 @@ import Image from 'next/image';
 export default function Footer() {
   return (
     <footer className="w-full bg-gradient-to-b from-[#0b0b2d] via-[#06061c] to-black text-gray-300">
-      <div className="mx-auto max-w-7xl px-4 sm:px-6 md:px-10 py-12 md:py-20">
+      <div className="mx-auto max-w-8xl px-4 sm:px-6 md:px-20 py-12 md:py-20">
 
         {/* TOP GRID */}
         <div className="grid grid-cols-1 gap-8 sm:gap-10 md:gap-12 sm:grid-cols-2 lg:grid-cols-5">
@@ -18,7 +18,7 @@ export default function Footer() {
               <div className="flex h-7 w-7 items-center justify-center">
                 <Image src={logo} alt="Logo" className="h-15 w-15 object-contain" />
               </div>
-              Hello,Pay
+              HelloPe
             </div>
 
             <p className="mt-4 text-xs sm:text-sm leading-relaxed text-gray-400">
@@ -66,7 +66,7 @@ export default function Footer() {
               <li><a href='#pricing'>Pricing</a></li>
               {/* <li>Blog</li> */}
               <li><a href='#howitworks'>How It Works</a></li>
-              <li>Contact</li>
+              
             </ul>
           </div>
 
@@ -80,6 +80,7 @@ export default function Footer() {
               <li>Tutorials</li>
               <li>API Docs</li>
               <li>Community</li>
+              <li>Contact</li>
             </ul>
           </div>
 
@@ -101,7 +102,7 @@ export default function Footer() {
 
         {/* BOTTOM BAR */}
         <div className="flex flex-col items-center justify-between gap-4 text-xs text-gray-500 md:flex-row">
-          <p>©2025, Streamia. All Rights reserved.</p>
+          <p>©{new Date().getFullYear()}, Streamia. All Rights reserved.</p>
 
           <div className="flex gap-4">
             <span>Privacy Policy</span>

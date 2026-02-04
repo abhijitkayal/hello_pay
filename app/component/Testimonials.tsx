@@ -3,7 +3,7 @@
 import { Star, ChevronLeft, ChevronRight } from 'lucide-react';
 import Image from 'next/image';
 import { useState } from 'react';
-import logo from "../Screenshot_2026-02-02_085244-removebg-preview.png"
+import logo from "./download.jpg"
 
 const testimonials = [
   {
@@ -61,7 +61,7 @@ export default function Testimonials() {
   
   return (
     <section className="w-full bg-gray-200 mt-6 md:mt-10 px-3 sm:px-4 md:px-8 lg:px-14 py-8 md:py-16 lg:py-24">
-      <div className="mx-auto grid max-w-full md:max-w-7xl grid-cols-1 items-center gap-6 md:gap-12 lg:gap-16 px-2 sm:px-4 md:px-6 lg:grid-cols-2">
+      <div className="mx-auto -ml-0.5 grid max-w-full md:max-w-7xl grid-cols-1 items-center gap-6 md:gap-12 lg:gap-16 px-2 sm:px-4 md:px-6 lg:grid-cols-2">
 
         {/* LEFT CONTENT */}
         <div className='text-center lg:text-left'>
@@ -100,7 +100,7 @@ export default function Testimonials() {
 
         {/* RIGHT CARD STACK */}
         <div className="relative h-[240px] sm:h-[280px] md:h-[320px] lg:h-[350px] w-full max-w-full sm:max-w-md mx-auto lg:max-w-none flex items-start justify-center mt-6 lg:mt-0">
-          <div className="relative h-56 sm:h-64 md:h-64 w-full max-w-[280px] md:-mr-34 sm:max-w-sm">
+          <div className="relative h-56 sm:h-64 md:h-64 w-full max-w-[280px] md:-mr-57 sm:max-w-sm">
             {cards.map((card, index) => (
               <div
                 key={card.id}

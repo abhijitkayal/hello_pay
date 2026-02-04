@@ -74,8 +74,8 @@ const Hero = () => {
       
               {/* NAVBAR */}
               <nav className="flex justify-between items-center
-                mx-4 sm:mx-8 md:mx-20 mt-4 rounded-3xl px-4 sm:px-6 h-14 
-                bg-white/70 backdrop-blur-xl shadow-sm">
+                mx-4 sm:mx-8 md:mx-20 mt-4 rounded-3xl px-4 sm:px-6 h-13 
+                bg-white/70 backdrop-blur-xl shadow-sm ">
       
                 <div className="flex items-center md:-ml-4 gap-2">
                   <Image
@@ -86,7 +86,7 @@ const Hero = () => {
                     className="object-contain"
                     priority
                   />
-                  <h1 className="font-semibold text-slate-900">Hello,Pay</h1>
+                  <h1 className="font-semibold text-slate-900">HelloPe</h1>
                 </div>
       
                 {/* Desktop Navigation */}
@@ -97,12 +97,12 @@ const Hero = () => {
                   <a href='#pricing' className="hover:text-blue-600 transition">Pricing</a>
                 </ol>
       
-                <button className="hidden md:flex items-center gap-2 rounded-full -mr-5
+                <button className="hidden md:flex items-center gap-1 rounded-full -mr-4.5
     bg-gradient-to-b from-[#484e57] via-[#2b333a] to-[#111827]
-    px-4 py-2 text-sm font-medium text-gray-50
+    px-2 py-2 text-sm font-medium text-gray-50
     shadow-[0_8px_20px_rgba(0,0,0,0.35)]
     transition hover:brightness-110">
-                  <span className="flex h-5 w-5 items-center justify-center rounded-full bg-white/20 text-xs">
+                  <span className="flex h-6 w-6  items-center justify-center rounded-full text-xs">
                     ▶
                   </span>
                   Get Started
@@ -151,14 +151,14 @@ const Hero = () => {
                       Pricing
                     </a>
                     <button className="
-    flex items-center gap-2 rounded-full
+    flex items-center gap-1 rounded-full
     bg-gradient-to-b from-[#484e57] via-[#2b333a] to-[#111827]
-    px-4 py-2 text-sm font-medium text-gray-50
+    px-2 py-2 text-sm font-medium text-gray-50
     shadow-[0_8px_20px_rgba(0,0,0,0.35)]
     transition hover:brightness-110
   "
 >
-  <span className="flex h-5 w-5 items-center justify-center rounded-full bg-white/20 text-xs">
+  <span className="flex h-5 w-5 items-center justify-center rounded-full text-xs">
     ▶
   </span>
   Get Started
@@ -189,14 +189,14 @@ const Hero = () => {
           />
           <button
   className="
-    flex items-center gap-2 rounded-full
+    flex items-center gap-1 rounded-full
     bg-gradient-to-b from-[#484e57] via-[#2b333a] to-[#111827]
-    px-4 py-2 text-sm font-medium text-gray-50
+    px-2 py-2 text-sm font-medium text-gray-50
     shadow-[0_8px_20px_rgba(0,0,0,0.35)]
     transition hover:brightness-110
   "
 >
-  <span className="flex h-5 w-5 items-center justify-center rounded-full bg-white/20 text-xs">
+  <span className="flex h-5 w-5 items-center justify-center rounded-full  text-xs">
     ▶
   </span>
   Get Started

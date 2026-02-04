@@ -13,7 +13,7 @@ export default function Features() {
 ];
   return (
     <section className="relative bg-white px-2 sm:px-4 md:px-6 py-6 md:py-16" id="features">
-      <div className="mx-auto max-w-full md:max-w-7xl px-1 sm:px-2 md:px-8">
+      <div className="mx-auto max-w-full md:max-w-8xl px-1 sm:px-2 md:px-8">
         {/* Heading */}
         <div className="mb-6 md:mb-16 text-center">
           <span className="mb-2 md:mb-3 inline-block rounded-full shadow-[0_8px_20px_rgba(0,0,0,0.35)] text-yellow-300 px-3 py-1 text-[10px] sm:text-xs font-medium bg-black">
