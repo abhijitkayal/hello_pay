@@ -102,7 +102,7 @@ export default function Footer() {
 
         {/* BOTTOM BAR */}
         <div className="flex flex-col items-center justify-between gap-4 text-xs text-gray-500 md:flex-row">
-          <p>©{new Date().getFullYear()}, Streamia. All Rights reserved.</p>
+          <p>©{new Date().getFullYear()}, HelloPe. All Rights reserved.</p>
 
           <div className="flex gap-4">
             <span>Privacy Policy</span>

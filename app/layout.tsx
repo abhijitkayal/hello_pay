@@ -9,7 +9,7 @@ const inter = Inter({
 });
 
 export const metadata: Metadata = {
-  title: "Revolutionizing Bussiness Payments Across India!",
+  title: "HelloPe-Revolutionizing Bussiness Payments Across India!",
   description: "Manage spending, track income, and stay on top of your finances with ease — all from one simple dashboard.",
 };
 
