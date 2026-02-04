@@ -11,9 +11,6 @@ const inter = Inter({
 export const metadata: Metadata = {
   title: "Revolutionizing Bussiness Payments Across India!",
   description: "Manage spending, track income, and stay on top of your finances with ease — all from one simple dashboard.",
-  icons: {
-    icon: "/hellope_financial_services_private_limited_logo-modified.png",
-  },
 };
 
 export default function RootLayout({
